@@ -1,14 +1,4 @@
 from django.db import models
+from transliterate import slugify
 
 # Create your models here.
-
-class City(models.Model):
-    name = models.CharField(max_length=50, verbose_name='Ort')
-    slug = models.CharField(max_length=50, blank=True)
-
-    class Meta:
-        verbose_name = 'Ort'
-        verbose_name_plural = 'Ort'
-
-    def __str__(self):
-        return self.name
